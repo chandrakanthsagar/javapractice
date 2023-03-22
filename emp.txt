@@ -1,0 +1,22 @@
+ create table dept_cd8(deptno int not null,dname varchar2(20),loc varchar(20),constraint pk_d8 primary key(deptno));
+insert into dept_cd8 values(10,'ACCOUNTING','NEW YORK');
+insert into dept_cd8 values(20,'RESEARCH','DALLAS');
+insert into dept_cd8 values(30,'SALES','CHICAGO');
+insert into dept_cd8 values(40,'OPERATIONS','BOSTON');
+
+
+create table emp_cd8(empno int not null,ename varchar2(20),job varchar2(20),mgr int,hiredate date,sal int not null,comm int,deptno int not null,constraint pk_5d8 primary key(empno),foreign key(deptno) references dept_cd8);
+insert into emp_cd8 values(7369,'SMITH','CLERK',7902,'17-dec-1980',800,null ,20);
+insert into emp_cd8 values(7499,'ALLEN','SALESMAN',7698,'20-feb-1981',1600,300 ,30);
+insert into emp_cd8 values(7521,'WARD','SALESMAN',7698,'22-feb-1981',1250,500 ,30);
+insert into emp_cd8 values(7566,'JONES','MANAGER',7839,'02-apr-1981',2975,null ,20);
+insert into emp_cd8 values(7654,'MARTIN','SALESMAN',7698,'28-sep-1981',1250,1400 ,30);
+insert into emp_cd8 values(7698,'BLAKE','MANAGER',7839,'01-may-1981',2850,null ,30);
+insert into emp_cd8 values(7782,'CLARK','MANAGER',7839,'09-jun-1981',2450,null ,10);
+insert into emp_cd8 values(7788,'SCOTT','ANALYST',7566,'09-dec-1982',3000,null ,20);
+insert into emp_cd8 values(7839,'KING','PRESIDENT',NULL,'17-nov-1981',5000,null ,10);
+insert into emp_cd8 values(7844,'TURNER','SALESMAN',7698,'08-nov-1981',1500,0 ,30);
+insert into emp_cd8 values(7876,'ADAMS','CLERK',7788,'12-jan-1983',1100,null ,20);
+insert into emp_cd8 values(7900,'JAMES','CLERK',7698,'03-dec-1981',950,null ,30);
+insert into emp_cd8 values(7902,'FORD','ANALYST',7566,'03-dec-1981',3000,null ,20);
+insert into emp_cd8 values(7934,'MILLER','CLERK',7782,'23-jan-1982',1300,null ,10);
